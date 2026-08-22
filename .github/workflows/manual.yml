@@ -28,5 +28,5 @@ jobs:
         flake8 . --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        # comment out run pytest on all tests pytest test_ml.py -v
-        pytest -v #added this so all tests are tested 
+        pytest test_ml.py -v
+        
