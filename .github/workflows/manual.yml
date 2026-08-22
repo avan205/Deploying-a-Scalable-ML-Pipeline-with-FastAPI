@@ -10,9 +10,11 @@ jobs:
         python-version: ["3.10"] 
 
     steps:
-    - uses: actions/checkout@v4 #original v2
+    #original version was v2
+    - uses: actions/checkout@v4 
     - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v5 #original v2
+    #original version was v2
+      uses: actions/setup-python@v5 
       with:
         python-version: ${{ matrix.python-version }}
     - name: Install dependencies
@@ -21,10 +23,7 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names uncomment to allow longer lines
-        # comment out so all errors show up flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide removed --count --exit-zero
+      run: |  
         flake8 . --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
