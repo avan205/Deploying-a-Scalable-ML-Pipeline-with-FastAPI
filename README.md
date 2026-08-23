@@ -29,6 +29,7 @@ Working in a command line environment is recommended for ease of use with git an
     * POST that does model inference.
 
 # GitHub Link 
+https://github.com/avan205/Deploying-a-Scalable-ML-Pipeline-with-FastAPI
 
 # Sources
 Actions. (n.d.). GitHub - actions/starter-workflows: Accelerating new GitHub Actions workflows. GitHub. https://github.com/actions/starter-workflows
